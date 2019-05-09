@@ -25,26 +25,31 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun onClickBtnFocusBackward(view: View) {
+        //currentFocus?.focusSearch(View.FOCUS_BACKWARD)!!.requestFocus()
     }
 
     private fun onClickBtnFocusForkward(view: View) {
-
+        //currentFocus?.focusSearch(View.FOCUS_FORWARD)!!.requestFocus()
     }
 
     private fun onClickBtnFocusUp(view: View) {
-
+        //currentFocus?.focusSearch(View.FOCUS_UP)!!.requestFocus()
+        currentFocus!!.requestFocus(View.FOCUS_UP)
     }
 
     private fun onClickBtnFocusDown(view: View) {
-
+        //currentFocus?.focusSearch(View.FOCUS_DOWN)!!.requestFocus()
+        currentFocus!!.requestFocus(View.FOCUS_DOWN)
     }
 
     private fun onClickBtnFocusLeft(view: View) {
-
+       //currentFocus?.focusSearch(View.FOCUS_LEFT)!!.requestFocus()
+        currentFocus!!.requestFocus(View.FOCUS_LEFT)
     }
 
     private fun onClickBtnFocusRight(view: View) {
-
+        //currentFocus?.focusSearch(View.FOCUS_RIGHT)!!.requestFocus()
+        currentFocus!!.requestFocus(View.FOCUS_RIGHT)
     }
 
     private val mOnClickListener = View.OnClickListener { view ->
