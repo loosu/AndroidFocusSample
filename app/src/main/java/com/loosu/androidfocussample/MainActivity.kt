@@ -3,6 +3,8 @@ package com.loosu.androidfocussample
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.RecyclerView
+import android.view.KeyEvent
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -34,7 +36,13 @@ class MainActivity : AppCompatActivity() {
 
     private fun onClickBtnFocusUp(view: View) {
         //currentFocus?.focusSearch(View.FOCUS_UP)!!.requestFocus()
-        currentFocus!!.requestFocus(View.FOCUS_UP)
+        //currentFocus!!.requestFocus(View.FOCUS_UP)
+        val curTime = System.currentTimeMillis()
+        val keyCode = KeyEvent.KEYCODE_DPAD_UP
+        val downEvent = KeyEvent(curTime, curTime, KeyEvent.ACTION_DOWN, keyCode, 0)
+        val upEvent = KeyEvent(curTime + 80, curTime + 80, KeyEvent.ACTION_UP, keyCode, 0)
+        onKeyDown(keyCode, downEvent)
+        onKeyDown(keyCode, upEvent)
     }
 
     private fun onClickBtnFocusDown(view: View) {
@@ -43,7 +51,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun onClickBtnFocusLeft(view: View) {
-       //currentFocus?.focusSearch(View.FOCUS_LEFT)!!.requestFocus()
+        //currentFocus?.focusSearch(View.FOCUS_LEFT)!!.requestFocus()
         currentFocus!!.requestFocus(View.FOCUS_LEFT)
     }
 
