@@ -39,32 +39,32 @@ class MainActivity : AppCompatActivity() {
 
     private fun onClickBtnFocusUp(view: View) {
         ALog.d(TAG)
-        //currentFocus?.focusSearch(View.FOCUS_UP)!!.requestFocus()
+        currentFocus?.focusSearch(View.FOCUS_UP)?.requestFocus()
         //currentFocus!!.requestFocus(View.FOCUS_UP)
-        val curTime = System.currentTimeMillis()
-        val keyCode = KeyEvent.KEYCODE_DPAD_UP
-        val downEvent = KeyEvent(curTime, curTime, KeyEvent.ACTION_DOWN, keyCode, 0)
-        val upEvent = KeyEvent(curTime + 80, curTime + 80, KeyEvent.ACTION_UP, keyCode, 0)
-        onKeyDown(keyCode, downEvent)
-        onKeyDown(keyCode, upEvent)
     }
 
     private fun onClickBtnFocusDown(view: View) {
         ALog.d(TAG)
-        //currentFocus?.focusSearch(View.FOCUS_DOWN)!!.requestFocus()
-        currentFocus!!.requestFocus(View.FOCUS_DOWN)
+        currentFocus?.focusSearch(View.FOCUS_DOWN)?.requestFocus()
+        //currentFocus!!.requestFocus(View.FOCUS_DOWN)
     }
 
     private fun onClickBtnFocusLeft(view: View) {
         ALog.d(TAG)
-        //currentFocus?.focusSearch(View.FOCUS_LEFT)!!.requestFocus()
-        currentFocus!!.requestFocus(View.FOCUS_LEFT)
+        currentFocus?.focusSearch(View.FOCUS_LEFT)?.requestFocus()
+        //currentFocus!!.requestFocus(View.FOCUS_LEFT)
     }
 
     private fun onClickBtnFocusRight(view: View) {
         ALog.d(TAG)
-        //currentFocus?.focusSearch(View.FOCUS_RIGHT)!!.requestFocus()
-        currentFocus!!.requestFocus(View.FOCUS_RIGHT)
+        currentFocus?.focusSearch(View.FOCUS_RIGHT)?.requestFocus()
+        //currentFocus!!.requestFocus(View.FOCUS_RIGHT)
+    }
+
+    override fun dispatchKeyEvent(event: KeyEvent?): Boolean {
+        ALog.d(TAG, event)
+        currentFocus.requestFocus()
+        return super.dispatchKeyEvent(event)
     }
 
     private val mOnClickListener = View.OnClickListener { view ->
