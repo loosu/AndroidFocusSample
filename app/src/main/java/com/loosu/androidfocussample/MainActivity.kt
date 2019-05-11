@@ -3,12 +3,13 @@ package com.loosu.androidfocussample
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
 import android.view.KeyEvent
 import android.view.View
+import com.loosu.alog.ALog
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+    val TAG = "MainActivity"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,14 +28,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun onClickBtnFocusBackward(view: View) {
+        ALog.d(TAG)
         //currentFocus?.focusSearch(View.FOCUS_BACKWARD)!!.requestFocus()
     }
 
     private fun onClickBtnFocusForkward(view: View) {
+        ALog.d(TAG)
         //currentFocus?.focusSearch(View.FOCUS_FORWARD)!!.requestFocus()
     }
 
     private fun onClickBtnFocusUp(view: View) {
+        ALog.d(TAG)
         //currentFocus?.focusSearch(View.FOCUS_UP)!!.requestFocus()
         //currentFocus!!.requestFocus(View.FOCUS_UP)
         val curTime = System.currentTimeMillis()
@@ -46,16 +50,19 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun onClickBtnFocusDown(view: View) {
+        ALog.d(TAG)
         //currentFocus?.focusSearch(View.FOCUS_DOWN)!!.requestFocus()
         currentFocus!!.requestFocus(View.FOCUS_DOWN)
     }
 
     private fun onClickBtnFocusLeft(view: View) {
+        ALog.d(TAG)
         //currentFocus?.focusSearch(View.FOCUS_LEFT)!!.requestFocus()
         currentFocus!!.requestFocus(View.FOCUS_LEFT)
     }
 
     private fun onClickBtnFocusRight(view: View) {
+        ALog.d(TAG)
         //currentFocus?.focusSearch(View.FOCUS_RIGHT)!!.requestFocus()
         currentFocus!!.requestFocus(View.FOCUS_RIGHT)
     }
