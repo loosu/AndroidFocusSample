@@ -82,7 +82,6 @@ class MainActivity : AppCompatActivity() {
         val newFocus = currentFocus?.focusSearch(direction)
         val requestFocus = newFocus?.requestFocus()
         ALog.d(TAG, "currentFocus = $currentFocus, newFocus = $newFocus, requestFocus = $requestFocus")
-        currentFocus.clearFocus()
     }
 
     private val mOnClickListener = View.OnClickListener { view ->
