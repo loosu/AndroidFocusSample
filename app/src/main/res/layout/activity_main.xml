@@ -7,11 +7,233 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/view_list"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/view_list"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <android.support.v7.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/layout_focus_root"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:background="@drawable/focus_test_drawable"
+                android:contentDescription="layout_focus_root"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/layout_focus_group_1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/focus_test_drawable"
+                    android:contentDescription="layout_focus_group_1"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true">
+
+                    <LinearLayout
+                        android:id="@+id/layout_focus_group_1_class_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/focus_test_drawable"
+                        android:contentDescription="layout_focus_group_1_class_1"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/view_focus_group_1_class_1_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/focus_test_drawable"
+                            android:contentDescription="view_focus_group_1_class_1_1"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true" />
+
+                        <TextView
+                            android:id="@+id/view_focus_group_1_class_1_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/focus_test_drawable"
+                            android:contentDescription="view_focus_group_1_class_1_2"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true" />
+
+                        <TextView
+                            android:id="@+id/view_focus_group_1_class_1_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/focus_test_drawable"
+                            android:contentDescription="view_focus_group_1_class_1_3"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_focus_group_1_class_2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/focus_test_drawable"
+                        android:contentDescription="layout_focus_group_1_class_2"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/view_focus_group_1_class_2_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/focus_test_drawable"
+                            android:contentDescription="view_focus_group_1_class_2_1"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true" />
+
+                        <TextView
+                            android:id="@+id/view_focus_group_1_class_2_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/focus_test_drawable"
+                            android:contentDescription="view_focus_group_1_class_2_2"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true" />
+
+                        <TextView
+                            android:id="@+id/view_focus_group_1_class_2_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/focus_test_drawable"
+                            android:contentDescription="view_focus_group_1_class_2_3"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_focus_group_2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/focus_test_drawable"
+                    android:contentDescription="layout_focus_group_2"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true">
+
+                    <LinearLayout
+                        android:id="@+id/layout_focus_group_2_class_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/focus_test_drawable"
+                        android:contentDescription="layout_focus_group_2_class_1"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/view_focus_group_2_class_1_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/focus_test_drawable"
+                            android:contentDescription="view_focus_group_2_class_1_1"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true" />
+
+                        <TextView
+                            android:id="@+id/view_focus_group_2_class_1_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/focus_test_drawable"
+                            android:contentDescription="view_focus_group_2_class_1_2"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true" />
+
+                        <TextView
+                            android:id="@+id/view_focus_group_2_class_1_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/focus_test_drawable"
+                            android:contentDescription="view_focus_group_2_class_1_3"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_focus_group_2_class_2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/focus_test_drawable"
+                        android:contentDescription="layout_focus_group_2_class_2"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/view_focus_group_2_class_2_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/focus_test_drawable"
+                            android:contentDescription="view_focus_group_2_class_2_1"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true" />
+
+                        <TextView
+                            android:id="@+id/view_focus_group_2_class_2_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/focus_test_drawable"
+                            android:contentDescription="view_focus_group_2_class_2_2"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true" />
+
+                        <TextView
+                            android:id="@+id/view_focus_group_2_class_2_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/focus_test_drawable"
+                            android:contentDescription="view_focus_group_2_class_2_3"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
