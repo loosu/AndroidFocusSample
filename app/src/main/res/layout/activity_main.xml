@@ -155,6 +155,7 @@
                             android:background="@drawable/focus_test_drawable"
                             android:contentDescription="view_focus_group_1_class_2_4"
                             android:focusable="true"
+                            android:visibility="invisible"
                             android:nextFocusDown="@id/view_focus_group_1_class_1_4"
                             android:focusableInTouchMode="true" />
 
