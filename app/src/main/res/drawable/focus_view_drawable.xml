@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true">
+        <layer-list>
+            <item android:drawable="@drawable/ic_launcher_background" />
+            <item>
+                <shape>
+                    <stroke android:width="2dp" android:color="#FF6" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <item android:state_pressed="true">
+        <ripple android:color="@color/colorAccent">
+            <item android:drawable="@mipmap/ic_launcher" />
+        </ripple>
+    </item>
+
+    <item android:state_enabled="false">
+        <bitmap android:alpha="0.5" android:src="@mipmap/ic_launcher" />
+    </item>
+
+    <item android:drawable="@mipmap/ic_launcher" />
+</selector>

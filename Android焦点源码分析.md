@@ -30,7 +30,6 @@ direction 6种取值类型：
 	// 1.2.1 ViewGroup.requestFocus(direction, previouslyFocusedRect) 
 	// 和 ViewGroup.requestFocus(direction, previouslyFocusedRect)
 	// 处理过程不同.
-
 	public boolean requestFocus(int direction, Rect previouslyFocusedRect) {
         return requestFocusNoSearch(direction, previouslyFocusedRect);
     }
@@ -69,6 +68,11 @@ direction 6种取值类型：
 
 ####1.1.3 View.canTakeFocus() 是否可获取焦点
 
+sCanFocusZeroSized 是一个静态标志默认false不用管。
+isLayoutValid() 没搞懂。
+
+其实也就是说 View 的尺寸合法后，VISIBLE、FOCUSABLE、ENABLED三个标志同时满足时才能获取焦点。
+
 	private boolean canTakeFocus() {
         return ((mViewFlags & VISIBILITY_MASK) == VISIBLE)
                 && ((mViewFlags & FOCUSABLE) == FOCUSABLE)
@@ -83,13 +87,15 @@ direction 6种取值类型：
 - 当前 view 已 attach 到其他 view 树时，判断该 view 树是否是 inTouchMode；
 - 当前 view 没有 attach 到其他 view 树时，判断当前 Window 是不是 inTouchMode。
 
-	    public boolean isInTouchMode() {
-	        if (mAttachInfo != null) {
-	            return mAttachInfo.mInTouchMode;
-	        } else {
-	            return ViewRootImpl.isInTouchMode();
-	        }
+一般来说这个方法返回true
+
+	public boolean isInTouchMode() {
+	    if (mAttachInfo != null) {
+	        return mAttachInfo.mInTouchMode;
+	    } else {
+	        return ViewRootImpl.isInTouchMode();
 	    }
+	}
 
 
 ####1.1.5 View.hasAncestorThatBlocksDescendantFocus() View 树父节点是否屏蔽子节点焦点
